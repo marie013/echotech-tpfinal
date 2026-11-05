@@ -19,48 +19,6 @@ El proyecto está dividido en tres ejercicios independientes, cada uno enfocado 
 - Pytest
 - HTML y CSS (para la interfaz web)
 
-# Estructura del proyecto
-
-ecotech-tpfinal/
-│
-├── config/
-│
-├── ejercicio_1_sensores/
-│   ├── limpieza.py
-│   ├── resumen_estadistico.py
-│   └── main.py
-│
-├── ejercicio_2_productos/
-│   ├── excepciones.py
-│   ├── dispositivos.py
-│   ├── gestor_inventario.py
-│   ├── catalogo_ecotech.json
-│   └──main.py
-│
-├── ejercicio_3_auditoria_web/
-│   ├── calculos.py
-│   ├── metricas.py
-│   ├── views.py
-│   ├── urls.py
-│   ├── templates/
-│   │   └── sustentabilidad/
-│   │       └── panel.html
-│   ├── static/
-│   │   └── ejercicio_3_auditoria_web/
-│   │       └── css/
-│   │           └── panel.css
-│   └── tests/
-│       ├── test_emisiones.py
-│       └── test_metricas.py
-│
-├── .gitignore
-├── catalogo_ecotech.json
-├── manage.py
-├── requirements.txt
-├── pytest.ini
-└── README.md
-
-
 # Ejercicios
 
 # 1. Procesamiento de datos de sensores
