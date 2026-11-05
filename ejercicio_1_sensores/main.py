@@ -1,7 +1,8 @@
-from limpieza import limpiar_registro_sensor
-from resumen_estadistico import generar_resumen_sensores
+from ejercicio_1_sensores.limpieza import limpiar_registro_sensor
+from ejercicio_1_sensores.resumen_estadistico import generar_resumen_sensores
 
-lista_sensores = [
+def main():
+    lista_sensores = [
     {"sensor_id": " SENSOR-001 ", "temperatura": "24.5C", "ubicacion": "Planta Norte"},
     {"sensor_id": "sensor_002", "temperatura": " 30.2 °C ", "ubicacion": ""},
     {"sensor_id": " SENSOR-003", "temperatura": "19.8", "ubicacion": "Planta Sur "},
@@ -37,37 +38,40 @@ lista_sensores = [
     {"sensor_id": " SENSOR-033", "temperatura": "22.3c", "ubicacion": ""},
     {"sensor_id": "SENSOR-034 ", "temperatura": "23.1C", "ubicacion": "Laboratorio"},
     {"sensor_id": "sensor-035", "temperatura": " 32.0 ", "ubicacion": " Planta Sur "}
-]
+    ]
 
-lista_sensores_limpios = []
+    lista_sensores_limpios = []
 
-#Limpieza de registro en los sensores
-for registro in lista_sensores:
-    sensor_limpio = limpiar_registro_sensor(registro)
-    lista_sensores_limpios.append(sensor_limpio)
+    #Limpieza de registro en los sensores
+    for registro in lista_sensores:
+        sensor_limpio = limpiar_registro_sensor(registro)
+        lista_sensores_limpios.append(sensor_limpio)
 
-#Generar resumen estadístico
-umbral_temperatura = 24.0
+    #Generar resumen estadístico
+    umbral_temperatura = 24.0
 
-lista_sensores_alertas, promedio_temperatura = generar_resumen_sensores(
-    lista_sensores_limpios,
-    umbral_temperatura
-)
+    lista_sensores_alertas, promedio_temperatura = generar_resumen_sensores(
+        lista_sensores_limpios,
+        umbral_temperatura
+    )
 
-#Muestra 1 Registros Normalizados
-print("<< REGISTROS NORMALIZADOS >>")
-for sensor in lista_sensores_limpios:
-    print(sensor)
-print("\n=================================================")
-#Muestra 2 Resumen estadístico
-print("<< REPORTE ECOTECH SOLUTIONS >>")
-print(f"Total de sensores: {len(lista_sensores_limpios)}")
-print(f"Temperatura Promedio: {promedio_temperatura}°C")
+    #Muestra 1 Registros Normalizados
+    print("<< REGISTROS NORMALIZADOS >>")
+    for sensor in lista_sensores_limpios:
+        print(sensor)
+    print("\n=================================================")
+    #Muestra 2 Resumen estadístico
+    print("<< REPORTE ECOTECH SOLUTIONS >>")
+    print(f"Total de sensores: {len(lista_sensores_limpios)}")
+    print(f"Temperatura Promedio: {promedio_temperatura}°C")
 
-print("Sensores en alerta:")
+    print("Sensores en alerta:")
 
-if lista_sensores_alertas:
-    for sensor_id in lista_sensores_alertas:
-        print(f"- {sensor_id}")
-else:
-    print("No se detectaron alertas.")
+    if lista_sensores_alertas:
+        for sensor_id in lista_sensores_alertas:
+            print(f"- {sensor_id}")
+    else:
+        print("No se detectaron alertas.")
+
+if __name__ == "__main__":
+    main()
