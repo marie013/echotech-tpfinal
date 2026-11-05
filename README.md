@@ -37,12 +37,22 @@ Funcionalidades:
 
 Módulo orientado a la gestión de un catálogo de productos mediante programación orientada a objetos.
 
+Funcionalidades principales:
+- Modelado de dispositivos ecológicos.
+- Herencia y polimorfismo mediante subclases.
+- Encapsulamiento y validación del stock.
+- Implementación de excepciones personalizadas.
+- Persistencia del catálogo mediante archivos JSON.
 
 # 3. Auditoría web y métricas de sustentabilidad
 
 Módulo destinado al análisis de métricas web y su relación con indicadores de sustentabilidad.
 
-
+Funcionalidades principales:
+- Cálculo de emisiones de carbono a partir del consumo energético.
+- Identificación de plantas con mayor consumo.
+- Consolidación de métricas de sustentabilidad.
+- Visualización de indicadores mediante un panel web desarrollado con Django.
 
 # Instalación y configuración
 
@@ -78,6 +88,13 @@ Para ejecutar el primer ejercicio desde la raíz del proyecto:
 
 python -m ejercicio_1_sensores.main
 
+Ejercicio 2 - Productos
+python -m ejercicio_2_productos.main
+
+Ejercicio 3 - Auditoría
+python manage.py runserver
+Para acceder directamente al panel:
+http://127.0.0.1:8000/sustentabilidad/panel/
 
 #  Pruebas
 
