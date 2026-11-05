@@ -58,13 +58,13 @@ Funcionalidades principales:
 
 Clonar el repositorio:
 
-git clone marie013/echotech-tpfinal
+git clone https://github.com/marie013/echotech-tpfinal.git
 
 
 Ingresar al directorio:
 
 
-cd ecotech-tpfinal
+cd echotech-tpfinal
 
 
 Crear y activar un entorno virtual:
