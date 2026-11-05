@@ -19,48 +19,6 @@ El proyecto está dividido en tres ejercicios independientes, cada uno enfocado 
 - Pytest
 - HTML y CSS (para la interfaz web)
 
-# Estructura del proyecto
-
-ecotech-tpfinal/
-│
-├── config/
-│
-├── ejercicio_1_sensores/
-│   ├── limpieza.py
-│   ├── resumen_estadistico.py
-│   └── main.py
-│
-├── ejercicio_2_productos/
-│   ├── excepciones.py
-│   ├── dispositivos.py
-│   ├── gestor_inventario.py
-│   ├── catalogo_ecotech.json
-│   └──main.py
-│
-├── ejercicio_3_auditoria_web/
-│   ├── calculos.py
-│   ├── metricas.py
-│   ├── views.py
-│   ├── urls.py
-│   ├── templates/
-│   │   └── sustentabilidad/
-│   │       └── panel.html
-│   ├── static/
-│   │   └── ejercicio_3_auditoria_web/
-│   │       └── css/
-│   │           └── panel.css
-│   └── tests/
-│       ├── test_emisiones.py
-│       └── test_metricas.py
-│
-├── .gitignore
-├── catalogo_ecotech.json
-├── manage.py
-├── requirements.txt
-├── pytest.ini
-└── README.md
-
-
 # Ejercicios
 
 # 1. Procesamiento de datos de sensores
@@ -79,12 +37,22 @@ Funcionalidades:
 
 Módulo orientado a la gestión de un catálogo de productos mediante programación orientada a objetos.
 
+Funcionalidades principales:
+- Modelado de dispositivos ecológicos.
+- Herencia y polimorfismo mediante subclases.
+- Encapsulamiento y validación del stock.
+- Implementación de excepciones personalizadas.
+- Persistencia del catálogo mediante archivos JSON.
 
 # 3. Auditoría web y métricas de sustentabilidad
 
 Módulo destinado al análisis de métricas web y su relación con indicadores de sustentabilidad.
 
-
+Funcionalidades principales:
+- Cálculo de emisiones de carbono a partir del consumo energético.
+- Identificación de plantas con mayor consumo.
+- Consolidación de métricas de sustentabilidad.
+- Visualización de indicadores mediante un panel web desarrollado con Django.
 
 # Instalación y configuración
 
@@ -120,6 +88,13 @@ Para ejecutar el primer ejercicio desde la raíz del proyecto:
 
 python -m ejercicio_1_sensores.main
 
+Ejercicio 2 - Productos
+python -m ejercicio_2_productos.main
+
+Ejercicio 3 - Auditoría
+python manage.py runserver
+Para acceder directamente al panel:
+http://127.0.0.1:8000/sustentabilidad/panel/
 
 #  Pruebas
 
