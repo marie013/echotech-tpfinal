@@ -1,0 +1,22 @@
+[
+    {
+        "id_producto": 1,
+        "nombre": "Panel Solar",
+        "precio": 150000,
+        "stock": 15
+    },
+    {
+        "id_producto": 1,
+        "nombre": "Panel Solar MAX",
+        "precio": 240000,
+        "stock": 5,
+        "eficiencia": 60,
+        "potencia_w": 600
+    },
+    {
+        "id_producto": 3,
+        "nombre": "Bateria Solar",
+        "precio": 50000,
+        "stock": 40
+    }
+]

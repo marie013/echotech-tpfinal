@@ -24,6 +24,7 @@ panel = PanelSolar(
 dispositivo.stock = 15
 print("Stock actualizado:", dispositivo.stock)
 
+#stock=-5
 
 inventario_prueba=[dispositivo, panel]
 
@@ -33,6 +34,7 @@ try:
     inventario_prueba.append(disp_1)
 except StockInvalidoError as e:
     print(f"Error al crear el objeto: {e}")
+
 #Prueba 2 para atrapar la excepción personalizada
 try:
     disp_2= DispositivoEcologico(4, "Torre Hidropónico", 1500000, -15)
@@ -49,4 +51,4 @@ print(panel.generar_ficha_tecnica())
 archivo = "catalogo_ecotech.json"
 GestorInventario.guardar_catalogo_json(inventario_prueba, archivo)
 
-print("Catálogo guardado correctamente")
+print("Catálogo guardado correctamente!")
